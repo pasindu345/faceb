@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Video Downloader</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fab fa-facebook"></i>
+                <h1>Facebook Video Downloader</h1>
+            </div>
+        </header>
+
+        <main>
+            <div class="card">
+                <div class="card-content">
+                    <h2>Download Facebook Videos Easily</h2>
+                    <p>Paste the URL of any Facebook video you want to download</p>
+                    
+                    <form id="download-form">
+                        <div class="input-group">
+                            <input 
+                                type="text" 
+                                id="video-url" 
+                                placeholder="https://www.facebook.com/watch?v=123456789" 
+                                required
+                            >
+                            <button type="submit" id="download-btn">
+                                <span>Get Video</span>
+                            </button>
+                        </div>
+                        <div class="error-message" id="error-message"></div>
+                    </form>
+
+                    <div class="loader" id="loader">
+                        <div class="spinner"></div>
+                        <p>Fetching video information...</p>
+                    </div>
+
+                    <div class="result" id="result">
+                        <div class="video-info">
+                            <div class="thumbnail-container">
+                                <img id="video-thumbnail" src="" alt="Video thumbnail">
+                            </div>
+                            <div class="video-details">
+                                <h3 id="video-title">Video Title</h3>
+                                <div class="quality-options">
+                                    <h4>Select Quality:</h4>
+                                    <div class="quality-buttons">
+                                        <button id="hd-btn" class="quality-btn">
+                                            <i class="fas fa-download"></i> HD Quality
+                                        </button>
+                                        <button id="sd-btn" class="quality-btn">
+                                            <i class="fas fa-download"></i> SD Quality
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="instructions">
+                <h3>How to Download Facebook Videos</h3>
+                <ol>
+                    <li>Copy the URL of the Facebook video you want to download</li>
+                    <li>Paste the URL in the input field above</li>
+                    <li>Click "Get Video" button</li>
+                    <li>Choose your preferred quality (HD or SD)</li>
+                    <li>Video will start downloading automatically</li>
+                </ol>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 Facebook Video Downloader. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
